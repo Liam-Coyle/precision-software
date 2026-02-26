@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Precision Software</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
+
+        :root {
+            --bg-page: #ECECE9;
+            --bg-dark: #121212;
+            --text-dark: #161616;
+            --text-muted: #4E4E4E;
+            --text-light: #DADADA;
+            --accent: #1e5a43;
+            --font-primary: 'Outfit', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--bg-page);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            padding: 1.75rem 4%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-weight: 400;
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
+        }
+
+        .thanks {
+            min-height: calc(100vh - 86px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 4%;
+        }
+
+        .panel {
+            width: min(760px, 100%);
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            padding: clamp(2rem, 5vw, 3rem);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: clamp(1.08rem, 1.8vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 46ch;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 1.6rem;
+            background: var(--bg-dark);
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Precision Software</div>
+    </nav>
+    <main class="thanks">
+        <section class="panel">
+            <h1>Thank you.</h1>
+            <p>We have your message and will get back to you shortly.</p>
+            <a href="index.html" class="btn">Back to Home</a>
+        </section>
+    </main>
+</body>
+</html>

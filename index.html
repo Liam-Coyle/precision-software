@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Software</title>
+    <meta name="description" content="Precision Software helps teams use AI development safely, clean up unstable codebases, and move toward controlled, high-quality software systems.">
+    <meta property="og:title" content="Precision Software">
+    <meta property="og:description" content="Precision Software helps teams use AI development safely, clean up unstable codebases, and move toward controlled, high-quality software systems.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Precision Software">
+    <meta name="twitter:description" content="Precision Software helps teams use AI development safely, clean up unstable codebases, and move toward controlled, high-quality software systems.">
+    <style>
+        /* --- HIGH-END EDITORIAL DESIGN --- */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
+
+        :root {
+            --bg-page: #ECECE9;
+            --bg-soft: #F4F4F1;
+            --bg-white: #FFFFFF;
+            --bg-dark: #121212;
+            --text-dark: #161616;
+            --text-muted: #4E4E4E;
+            --text-light: #DADADA;
+            --accent: #1D1D1D;
+            --font-primary: 'Outfit', sans-serif;
+            --border-subtle: 1px solid rgba(0, 0, 0, 0.12);
+            --border-quiet: 1px solid rgba(0, 0, 0, 0.07);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: clamp(3.2rem, 7vw, 6.2rem);
+            font-weight: 500;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1.14;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: clamp(1.08rem, 1.3vw, 1.26rem);
+            font-weight: 400;
+            color: var(--text-muted);
+            max-width: 60ch;
+        }
+
+        .label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 4%;
+        }
+
+        section {
+            padding: 7.5rem 0;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.75rem 4%;
+            background: var(--bg-page);
+            border-bottom: var(--border-quiet);
+        }
+
+        .logo {
+            font-weight: 400;
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-left: 2rem;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.5;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            min-height: calc(100vh - 86px);
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, var(--bg-page) 0%, #F2F2EF 100%);
+            border-bottom: var(--border-subtle);
+        }
+
+        .hero p {
+            font-size: clamp(1.2rem, 2vw, 1.55rem);
+            max-width: 52ch;
+            color: #2A2A2A;
+        }
+
+        .hero-content {
+            width: 100%;
+        }
+
+        /* --- GRID SECTIONS --- */
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .chapter-section {
+            border-top: var(--border-quiet);
+            border-bottom: var(--border-quiet);
+            margin-top: 2.25rem;
+        }
+
+        /* --- STATS SECTION --- */
+        .stats-section {
+            background: var(--bg-white);
+        }
+
+        .stat-block {
+            border-left: 3px solid var(--text-dark);
+            padding-left: 1.5rem;
+            margin-top: 1.85rem;
+        }
+
+        .stat-block:first-child {
+            margin-top: 0;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .method-section {
+            background: var(--bg-soft);
+            padding-bottom: 5rem;
+        }
+
+        .method-intro {
+            margin-bottom: 4rem;
+        }
+
+        /* --- SEAMLESS MACHINE ANIMATION SECTION --- */
+        .machine-visual {
+            background: transparent;
+            border: none;
+            padding: 0; 
+            margin-top: 2rem;
+            overflow: hidden; 
+            mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+        }
+
+        .machine-diagram {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Animation Timings */
+        .press-wrapper {
+            animation: press-action 4s cubic-bezier(0.7, 0, 0.2, 1) infinite;
+        }
+        
+        .payload-wrapper {
+            animation: payload-move 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+        
+        .payload-squash {
+            transform-origin: 500px 240px; 
+            animation: payload-squish 4s cubic-bezier(0.7, 0, 0.2, 1) infinite;
+        }
+        
+        .state-messy {
+            animation: fade-out-messy 4s step-end infinite;
+        }
+
+        .state-clean {
+            animation: fade-in-clean 4s step-end infinite;
+        }
+
+        /* Keyframes */
+        @keyframes payload-move {
+            0%, 5% { transform: translateX(-700px); }
+            20%, 65% { transform: translateX(0); }
+            85%, 100% { transform: translateX(700px); }
+        }
+
+        @keyframes press-action {
+            0%, 35% { transform: translateY(0); }
+            42% { transform: translateY(80px); } 
+            46% { transform: translateY(88px); } 
+            52% { transform: translateY(80px); } 
+            58%, 100% { transform: translateY(0); } 
+        }
+
+        @keyframes payload-squish {
+            0%, 39% { transform: scaleY(1); }
+            46% { transform: scaleY(0.90); } 
+            52%, 100% { transform: scaleY(1); } 
+        }
+
+        @keyframes fade-out-messy {
+            0%, 45% { opacity: 1; }
+            46%, 100% { opacity: 0; } 
+        }
+
+        @keyframes fade-in-clean {
+            0%, 45% { opacity: 0; }
+            46%, 100% { opacity: 1; } 
+        }
+
+        /* --- PATTERNS --- */
+        .pattern-verb {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .pattern-good {
+            color: #1e5a43;
+            font-weight: 500;
+        }
+
+        .pattern-bad {
+            color: #8a2d1f;
+            font-weight: 500;
+        }
+
+        .ref {
+            font-size: 0.72em;
+            vertical-align: super;
+            line-height: 0;
+            margin-left: 0.12em;
+            color: #5c5c5c;
+            text-decoration: none;
+        }
+
+        /* --- OFFERS SECTION --- */
+        .offers-section {
+            background: var(--bg-white);
+            padding: clamp(5.5rem, 8vw, 7rem) 0;
+        }
+
+        .offers-header {
+            margin-bottom: 2.4rem;
+        }
+
+        .offers-header h2 {
+            margin-bottom: 0.85rem;
+        }
+
+        .offers-header p {
+            max-width: 58ch;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .offer-card {
+            background: #f9f9f6;
+            border: var(--border-subtle);
+            padding: 1.8rem 2rem;
+            display: grid;
+            grid-template-columns: 110px minmax(0, 1fr) minmax(0, 1.5fr) 140px;
+            align-items: center;
+            gap: 2.5rem;
+            min-height: 220px;
+            transition: all 0.2s ease;
+        }
+        
+        .offer-icon {
+            width: 110px;
+            height: 110px;
+            display: block;
+        }
+
+        .offer-card h3 {
+            font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+            margin-bottom: 0;
+            line-height: 1.15;
+        }
+
+        .offer-card p {
+            max-width: none;
+            font-size: 1.12rem;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .offer-btn {
+            display: inline-block;
+            border: 1px solid rgba(0,0,0,0.18);
+            background: #ffffff;
+            color: #111;
+            text-decoration: none;
+            padding: 0.82rem 1.05rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 600;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .offer-btn:hover {
+            background: var(--text-dark);
+            color: var(--bg-white);
+        }
+
+        /* --- "GREYED OUT" LOCKED STATE FOR 3RD CARD --- */
+        .offer-card.future {
+            background: transparent;
+            border: 2px dashed rgba(0,0,0,0.15); /* Dashed border implies blueprint/not ready */
+            opacity: 0.55; /* Heavily greyed out */
+        }
+
+        .offer-card.future:hover {
+            opacity: 0.85; /* Lights up slightly on hover so they know they can click */
+        }
+
+        .offer-card.future .offer-btn {
+            background: transparent;
+            border: 1px solid rgba(0,0,0,0.3);
+        }
+
+        .offer-card.future .offer-btn:hover {
+            background: var(--text-dark);
+            color: var(--bg-white);
+        }
+
+        .tag-soon {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            background: #111;
+            color: #fff;
+            padding: 0.2rem 0.4rem;
+            border-radius: 2px;
+            display: inline-block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* --- FOOTER / CTA --- */
+        .footer-cta {
+            background: var(--bg-dark);
+            color: var(--bg-white);
+            padding: clamp(6rem, 10vw, 8.5rem) 0;
+            margin-top: 2.25rem;
+            min-height: 72vh;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .footer-cta h2 {
+            color: var(--bg-white);
+        }
+
+        .footer-cta p {
+            color: var(--text-light);
+        }
+
+        .footer-main {
+            max-width: 840px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .footer-main h2 {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            line-height: 1.02;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.1rem;
+        }
+
+        .footer-main p {
+            margin: 1rem 0 0;
+            max-width: 42ch;
+            color: rgba(255,255,255,0.82);
+            font-size: clamp(1.08rem, 1.4vw, 1.3rem);
+        }
+
+        .footer-main p + p {
+            margin-top: 1.25rem;
+        }
+
+        .contact-form {
+            margin-top: 2.2rem;
+            display: grid;
+            gap: 1rem;
+            max-width: 760px;
+        }
+
+        .contact-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .contact-field {
+            display: grid;
+            gap: 0.45rem;
+        }
+
+        .contact-field span {
+            font-size: 0.74rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+            color: rgba(255,255,255,0.76);
+        }
+
+        .contact-field input,
+        .contact-field textarea {
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.24);
+            background: rgba(255,255,255,0.04);
+            color: #ffffff;
+            padding: 0.9rem 1rem;
+            font-size: 1rem;
+            font-family: var(--font-primary);
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .contact-field textarea {
+            min-height: 170px;
+            resize: vertical;
+        }
+
+        .contact-field input::placeholder,
+        .contact-field textarea::placeholder {
+            color: rgba(255,255,255,0.52);
+        }
+
+        .contact-field input:focus,
+        .contact-field textarea:focus {
+            border-color: #1e5a43;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .contact-submit {
+            margin-top: 0.5rem;
+            justify-self: start;
+            background: #ffffff;
+            color: #111;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 1.05rem 2.4rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: var(--font-primary);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .contact-submit:hover {
+            opacity: 0.9;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            section {
+                padding: 5.5rem 0;
+            }
+
+            .split-grid {
+                grid-template-columns: 1fr;
+                gap: 2.25rem;
+            }
+
+            .offer-card {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.5rem;
+                text-align: center;
+                min-height: auto;
+            }
+            
+            .offer-icon {
+                margin: 0 auto;
+                width: 90px;
+                height: 90px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 6.5rem 0;
+            }
+
+            .footer-cta {
+                min-height: auto;
+            }
+            h1 { font-size: 3.3rem; }
+            p { font-size: 1.08rem; }
+            .chapter-section { margin-top: 1.5rem; }
+        }
+
+        @media (max-width: 640px) {
+            .stat-number {
+                font-size: 2.35rem;
+            }
+
+            .offer-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contact-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-submit {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .press-wrapper,
+            .payload-wrapper,
+            .payload-squash,
+            .state-messy,
+            .state-clean {
+                animation: none;
+            }
+            .payload-wrapper { transform: translateX(0); }
+            .state-messy { opacity: 0; }
+            .state-clean { opacity: 1; }
+            .press-wrapper { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Precision Software</div>
+        <div class="nav-links">
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Software Engineering is changing</h1>
+            <p>Software began as hand-crafted work by individual artisans. AI then sped up output, but used badly it only accelerated bugs and technical debt. The next standard is software delivered through controlled, repeatable, high-precision systems.</p>
+        </div>
+    </section>
+
+    <section class="stats-section chapter-section">
+        <div class="container split-grid">
+            <div>
+                <h2>AI <span class="pattern-verb">accelerated</span> <span class="pattern-good">coding</span>. It also <span class="pattern-verb">accelerated</span> <span class="pattern-bad">problems</span>.</h2>
+                <p>AI programming is now common across the industry. The problem is unmanaged adoption: without strong systems in place, technical debt rises, costs increase, and teams struggle to maintain code they did not design.</p>
+            </div>
+            <div>
+                <div class="stat-block">
+                    <div class="stat-number">97%</div>
+                    <p>of organizations are using or piloting AI coding assistants, and 100% report AI-generated code in their codebases.<a class="ref" href="https://www.businesswire.com/news/home/20251105110078/en/Report-Shadow-AI-Crisis-Looms-as-100-of-Companies-Have-AI-Generated-Code-But-81-of-Security-Teams-Lack-Visibility" target="_blank" rel="noopener noreferrer">[1]</a></p>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-number">81%</div>
+                    <p>of security teams lack full visibility into AI usage across the SDLC; Menlo also reports a 68% surge in shadow GenAI usage.<a class="ref" href="https://www.businesswire.com/news/home/20251105110078/en/Report-Shadow-AI-Crisis-Looms-as-100-of-Companies-Have-AI-Generated-Code-But-81-of-Security-Teams-Lack-Visibility" target="_blank" rel="noopener noreferrer">[1]</a><a class="ref" href="https://www.businesswire.com/news/home/20250804371445/en/Menlo-Securitys-2025-Report-Uncovers-68-Surge-in-Shadow-Generative-AI-Usage-in-the-Modern-Enterprise" target="_blank" rel="noopener noreferrer">[2]</a></p>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-number">48%</div>
+                    <p>increase in copy/pasted code in GitClear's 211M-line study, while refactoring dropped from 25% to below 10%.<a class="ref" href="https://www.gitclear.com/ai_assistant_code_quality_2025_research" target="_blank" rel="noopener noreferrer">[3]</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="method-section chapter-section">
+        <div class="container">
+            <div class="split-grid method-intro">
+                <div>
+                    <h2>Precision Software</h2>
+                </div>
+                <div>
+                    <p>The industry needs the software equivalent of precision engineering.</p>
+                    <p style="margin-top: 1rem;">Building that system around AI is the only way to move forward reliably as AI capability accelerates. In the future, AI should produce the highest-quality software possible, consistently and without drama.</p>
+                </div>
+            </div>
+            
+            <div class="machine-visual" aria-hidden="true">
+                <svg class="machine-diagram" viewBox="0 0 1000 280" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="#161616" stroke-width="1.5" opacity="0.04">
+                        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                            <path d="M 30 0 L 0 0 0 30" fill="none"/>
+                        </pattern>
+                        <rect width="1000" height="280" fill="url(#grid)" />
+                    </g>
+                    <line x1="500" y1="0" x2="500" y2="280" stroke="#161616" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.15" />
+
+                    <rect x="0" y="240" width="1000" height="40" fill="#EAEAEA" />
+                    <line x1="0" y1="240" x2="1000" y2="240" stroke="#161616" stroke-width="6" />
+
+                    <g class="payload-wrapper">
+                        <g class="payload-squash">
+                            <rect x="380" y="120" width="240" height="120" fill="#FFFFFF" stroke="#161616" stroke-width="6" rx="6" />
+                            <line x1="380" y1="144" x2="620" y2="144" stroke="#161616" stroke-width="2" opacity="0.1" />
+                            <circle cx="400" cy="132" r="3" fill="#161616" opacity="0.2" />
+                            <circle cx="412" cy="132" r="3" fill="#161616" opacity="0.2" />
+                            <circle cx="424" cy="132" r="3" fill="#161616" opacity="0.2" />
+
+                            <g class="state-messy">
+                                <path d="M 400 165 L 430 162 L 440 168 L 470 165" stroke="#8a2d1f" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8"/>
+                                <path d="M 420 185 L 480 182 L 490 188 L 560 185" stroke="#8a2d1f" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8"/>
+                                <path d="M 395 205 L 460 200 L 480 208 L 520 205" stroke="#8a2d1f" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8"/>
+                                <path d="M 440 225 L 490 222 L 500 228" stroke="#8a2d1f" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8"/>
+                            </g>
+
+                            <g class="state-clean">
+                                <rect x="400" y="162" width="60" height="6" fill="#1e5a43" rx="2" />
+                                <rect x="470" y="162" width="40" height="6" fill="#1e5a43" rx="2" opacity="0.5" />
+                                <rect x="420" y="182" width="100" height="6" fill="#1e5a43" rx="2" />
+                                <rect x="530" y="182" width="50" height="6" fill="#1e5a43" rx="2" opacity="0.5" />
+                                <rect x="420" y="202" width="140" height="6" fill="#1e5a43" rx="2" />
+                                <rect x="400" y="222" width="40" height="6" fill="#1e5a43" rx="2" />
+                            </g>
+                        </g>
+                    </g>
+
+                    <g class="press-wrapper">
+                        <rect x="470" y="-150" width="60" height="200" fill="#EAEAEA" stroke="#161616" stroke-width="6" />
+                        <line x1="485" y1="-150" x2="485" y2="50" stroke="#161616" stroke-width="2" opacity="0.1" />
+                        <line x1="515" y1="-150" x2="515" y2="50" stroke="#161616" stroke-width="2" opacity="0.1" />
+                        <path d="M 370 -10 L 630 -10 L 610 50 L 390 50 Z" fill="#161616" />
+                        <rect x="390" y="50" width="220" height="12" fill="#1e5a43" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers-section chapter-section">
+        <div class="container">
+            <div class="offers-header">
+                <h2>What We Offer</h2>
+                <p>While the industry moves toward this automated vision, there are practical steps you can take right now. We help you get the maximum benefit from AI today while keeping your systems stable as capability accelerates.</p>
+            </div>
+            <div class="offers-grid">
+                
+                <article class="offer-card">
+                    <svg class="offer-icon" viewBox="0 0 100 100" aria-hidden="true">
+                        <rect x="5" y="15" width="65" height="45" fill="none" stroke="#161616" stroke-width="5" rx="3"/>
+                        <line x1="37" y1="60" x2="37" y2="90" stroke="#161616" stroke-width="6" stroke-linecap="square"/>
+                        <line x1="20" y1="90" x2="55" y2="90" stroke="#161616" stroke-width="6" stroke-linecap="square"/>
+                        
+                        <rect x="15" y="28" width="20" height="6" fill="#1e5a43" rx="2"/>
+                        <rect x="15" y="40" width="35" height="6" fill="#1e5a43" rx="2"/>
+                        <rect x="15" y="52" width="15" height="6" fill="#1e5a43" rx="2"/>
+                        
+                        <circle cx="82" cy="28" r="6" fill="#161616"/>
+                        <line x1="82" y1="34" x2="82" y2="90" stroke="#161616" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="82" y1="45" x2="60" y2="35" stroke="#161616" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                    <div>
+                        <h3>Controlled AI Development Training</h3>
+                    </div>
+                    <div>
+                        <p>We train your developers to use AI the way the best software engineers in the world are using it, so your team gets the benefits of AI while reducing risk.</p>
+                    </div>
+                    <a class="offer-btn" href="#contact">Contact Us</a>
+                </article>
+
+                <article class="offer-card">
+                    <svg class="offer-icon" viewBox="0 0 100 100" aria-hidden="true">
+                        <rect x="5" y="15" width="90" height="70" fill="none" stroke="#161616" stroke-width="5" rx="4"/>
+                        <line x1="5" y1="34" x2="95" y2="34" stroke="#161616" stroke-width="5"/>
+                        <circle cx="16" cy="24.5" r="3" fill="#161616"/>
+                        <circle cx="26" cy="24.5" r="3" fill="#161616"/>
+                        <circle cx="36" cy="24.5" r="3" fill="#161616"/>
+                        
+                        <rect x="43" y="44" width="14" height="34" fill="#1e5a43" rx="1"/>
+                        <rect x="33" y="54" width="34" height="14" fill="#1e5a43" rx="1"/>
+                    </svg>
+                    <div>
+                        <h3>Codebase Cleanup Services</h3>
+                    </div>
+                    <div>
+                        <p>If the damage is already done, we come in, fix the issues that have built up, and help rescue the project before cost and risk spiral.</p>
+                    </div>
+                    <a class="offer-btn" href="#contact">Contact Us</a>
+                </article>
+
+                <article class="offer-card future">
+                    <svg class="offer-icon" viewBox="0 0 100 100" aria-hidden="true">
+                        <line x1="5" y1="85" x2="95" y2="85" stroke="#161616" stroke-width="5" stroke-linecap="round"/>
+
+                        <path d="M 15 85 L 15 50 L 35 35 L 35 50 L 55 35 L 55 50 L 75 35 L 75 85 Z" fill="none" stroke="#161616" stroke-width="5" stroke-linejoin="round"/>
+
+                        <rect x="75" y="20" width="10" height="65" fill="none" stroke="#161616" stroke-width="5" stroke-linejoin="round"/>
+
+                        <circle cx="80" cy="10" r="5" fill="#1e5a43"/>
+                        <circle cx="90" cy="5" r="3" fill="#1e5a43"/>
+
+                        <rect x="25" y="65" width="20" height="20" fill="none" stroke="#161616" stroke-width="5" stroke-linejoin="round"/>
+                    </svg>
+                    <div>
+                        <span class="tag-soon">Coming Soon</span>
+                        <h3 style="margin-top: 0.2rem;">Fully Automated Software Delivery</h3>
+                    </div>
+                    <div>
+                        <p>We are building the machine to manufacture high-quality software at scale. Contact us to join the waitlist for early pilot access.</p>
+                    </div>
+                    <a class="offer-btn" href="#contact">Contact Us</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-cta" id="contact">
+        <div class="container">
+            <div class="footer-main">
+                <h2>Contact Us</h2>
+                <p>If you want to chat, send us a message. We would be glad to hear from you.</p>
+                <form class="contact-form" action="https://formsubmit.co/liam@liamcoyle.com" method="POST">
+                    <input type="hidden" name="_subject" value="Precision Software Contact Form">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_next" id="form-next" value="thank-you.html">
+                    <div class="contact-row">
+                        <label class="contact-field">
+                            <span>Name</span>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </label>
+                        <label class="contact-field">
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="you@company.com" required>
+                        </label>
+                    </div>
+                    <label class="contact-field">
+                        <span>Message</span>
+                        <textarea name="message" placeholder="Send us a message if you would like to chat." required></textarea>
+                    </label>
+                    <button type="submit" class="contact-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            var nextField = document.getElementById("form-next");
+            if (!nextField) return;
+            try {
+                nextField.value = new URL("thank-you.html", window.location.href).toString();
+            } catch (error) {
+                nextField.value = "thank-you.html";
+            }
+        })();
+    </script>
+
+</body>
+</html>
