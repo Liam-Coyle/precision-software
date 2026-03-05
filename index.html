@@ -392,6 +392,61 @@
             margin-bottom: 0.4rem;
         }
 
+        /* --- INDUSTRY SIGNALS --- */
+        .signals-section {
+            background: var(--bg-soft);
+            padding: clamp(5rem, 7vw, 6.5rem) 0;
+        }
+
+        .signals-header {
+            margin-bottom: 1.8rem;
+        }
+
+
+        .signals-header h2 {
+            margin-bottom: 0.75rem;
+        }
+
+        .signals-header p {
+            max-width: 62ch;
+        }
+
+        .signals-list {
+            list-style: none;
+            border-top: var(--border-subtle);
+        }
+
+        .signal-item {
+            border-bottom: var(--border-subtle);
+            padding: 0.95rem 0;
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 1.4rem;
+            align-items: baseline;
+        }
+
+        .signal-date {
+            font-size: 0.9rem;
+            letter-spacing: 0.01em;
+            color: #6a6a6a;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .signal-link {
+            color: #0f3f2f;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+            font-size: 1.05rem;
+            line-height: 1.45;
+            font-weight: 500;
+        }
+
+        .signal-link:hover {
+            color: #0b2f23;
+        }
+
         /* --- FOOTER / CTA --- */
         .footer-cta {
             background: var(--bg-dark);
@@ -541,6 +596,11 @@
             .hero {
                 min-height: auto;
                 padding: 6.5rem 0;
+            }
+
+            .signal-item {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
             }
 
             .footer-cta {
@@ -763,6 +823,71 @@
                 </article>
 
             </div>
+        </div>
+    </section>
+
+    <section class="signals-section chapter-section">
+        <div class="container">
+            <div class="signals-header">
+                <h2>Industry Signals</h2>
+                <p>The shift is already underway. These are recent signals from teams building and debating agentic software engineering in production.</p>
+            </div>
+            
+
+            <ul class="signals-list">
+                <li class="signal-item">
+                    <span class="signal-date">19th February 2026</span>
+                    <a class="signal-link" href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2" target="_blank" rel="noopener noreferrer">Stripe Engineering: Minions, Stripe's One-shot End-to-end Coding Agents (Part 2)</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">17th February 2026</span>
+                    <a class="signal-link" href="https://www.infoq.com/news/2026/02/ai-agile-manifesto-debate/" target="_blank" rel="noopener noreferrer">InfoQ: AI and the Agile Manifesto Debate</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">12th February 2026</span>
+                    <a class="signal-link" href="https://cursor.com/blog/long-running-agents" target="_blank" rel="noopener noreferrer">Cursor: Long-running Agents</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">11th February 2026</span>
+                    <a class="signal-link" href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener noreferrer">OpenAI: Harness Engineering</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">9th February 2026</span>
+                    <a class="signal-link" href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents" target="_blank" rel="noopener noreferrer">Stripe Engineering: Minions, Stripe's One-shot End-to-end Coding Agents</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">5th February 2026</span>
+                    <a class="signal-link" href="https://www.anthropic.com/engineering/building-c-compiler" target="_blank" rel="noopener noreferrer">Anthropic Engineering: Building a C Compiler</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">5th February 2026</span>
+                    <a class="signal-link" href="https://cursor.com/blog/self-driving-codebases" target="_blank" rel="noopener noreferrer">Cursor: Self-driving Codebases</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">14th January 2026</span>
+                    <a class="signal-link" href="https://cursor.com/blog/scaling-agents" target="_blank" rel="noopener noreferrer">Cursor: Scaling Agents</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">9th January 2026</span>
+                    <a class="signal-link" href="https://www.marktechpost.com/2026/01/09/meta-and-harvard-researchers-introduce-the-confucius-code-agent-cca-a-software-engineering-agent-that-can-operate-at-large-scale-codebases/" target="_blank" rel="noopener noreferrer">MarkTechPost: Meta and Harvard Introduce the Confucius Code Agent</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">9th December 2025</span>
+                    <a class="signal-link" href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3" target="_blank" rel="noopener noreferrer">Spotify Engineering: Feedback Loops for Background Coding Agents (Part 3)</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">24th November 2025</span>
+                    <a class="signal-link" href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2" target="_blank" rel="noopener noreferrer">Spotify Engineering: Context Engineering for Background Coding Agents (Part 2)</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">6th November 2025</span>
+                    <a class="signal-link" href="https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1" target="_blank" rel="noopener noreferrer">Spotify Engineering: Spotify's Background Coding Agent (Part 1)</a>
+                </li>
+                <li class="signal-item">
+                    <span class="signal-date">26th February 2025</span>
+                    <a class="signal-link" href="https://factory.ai/news/missions" target="_blank" rel="noopener noreferrer">Factory: Missions</a>
+                </li>
+            </ul>
         </div>
     </section>
 
